@@ -226,7 +226,7 @@ namespace rectanglesNtriangles
                     x--;
                     goto case 0;
                 case 4:
-                    if (x == -1)
+                    if (z == -1)
                     {
                         Console.WriteLine("There are no triangles left!");
                         Console.ReadKey();
