@@ -1,0 +1,29 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine(YearSalary(5,50));
+            Console.ReadKey();
+        }
+        public static decimal YearSalary(int hoursperweek, int rateperweek)
+        {
+            int SalaryYear;
+            decimal finalsalary;
+            if (hoursperweek > 40)
+            {
+                SalaryYear = 52 * ((hoursperweek - 40) * 2 * rateperweek + 40 * rateperweek);
+            }
+            else
+            {
+                SalaryYear = 52 * hoursperweek * rateperweek;
+            }
+            if (SalaryYear > 30000)
+            {
+                finalsalary = (30000 * 0.79m) + ((SalaryYear - 30000) * 0.72m);
+                return finalsalary;
+            }
+            if (SalaryYear > 20000)
+            {
+                finalsalary = (20000 * 0.81m) + ((SalaryYear - 20000) * 0.79m);
+                return finalsalary;
+            }
+            finalsalary = SalaryYear * 0.81m;
+            return finalsalary;
