@@ -1,0 +1,32 @@
+static void Main(string[] args)
+        {
+            Console.WriteLine("Your final salary for this year is " + YearSalary(50, 30) + "$");
+            Console.ReadKey();
+        }
+        public static double YearSalary(int hoursperweek, int rateperhour)
+        {
+            int salaryWeek;
+            int bonushours = 0;
+            int salaryYear;
+            double finalSalary;
+            if (hoursperweek > 40)
+            {
+                bonushours = hoursperweek - 40;
+                hoursperweek = 40;
+            }
+            salaryWeek = (hoursperweek * rateperhour) + (bonushours * 2 * rateperhour);
+            salaryYear = 52 * salaryWeek;
+
+            if (salaryYear > 20000)
+            {
+                if (salaryYear > 30000)
+                {
+                    finalSalary = salaryYear * 0.72;
+                    return finalSalary;
+                }
+                finalSalary = salaryYear * 0.79;
+                return finalSalary;
+            }
+            finalSalary = salaryYear * 0.81;
+            return finalSalary;
+        }
