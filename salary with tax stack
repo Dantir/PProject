@@ -17,7 +17,7 @@ static void Main(string[] args)
             }
             if (SalaryYear > 30000)
             {
-                finalsalary = (30000 * 0.79m) + ((SalaryYear - 30000) * 0.72m);
+                finalsalary = (20000 * 0.81m) + (10000 * 0.79m) + ((SalaryYear - 30000) * 0.72m);
                 return finalsalary;
             }
             if (SalaryYear > 20000)
